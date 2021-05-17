@@ -1,5 +1,5 @@
 # 
-401 class 01 lab
+401 class 02 lab
 # LAB - 02
 ## basic-express-server
 ### Author: As-har Abuhelweh
