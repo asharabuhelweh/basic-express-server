@@ -5,7 +5,7 @@ const request = supertest(server.app);
 
 describe('server', () => {
   it('should get 404 status', async () => {
-    const response = await request.get('/jhu');
+    const response = await request.get('/loo');
     expect(response.status).toBe(404);
   });
 
@@ -22,6 +22,11 @@ describe('server', () => {
   it('should get an error', async () => {
     const response = await request.get('/bad');
     expect(response.status).toEqual(500);
+  });
+
+  it('wrong method', async () => {
+    const response = await request.patch('/person?name=ashar');
+    expect(response.status).toEqual(404);
   });
 
 
